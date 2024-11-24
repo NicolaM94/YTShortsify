@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "YTShortify",
+  "version": "1.0",
+
+  "description": "Removes the shorts section from any YouTube page.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "browser_specific_settings": {
+  "gecko": {
+    "id": "borderify@example.com"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["ytshortify.js"]
+    }
+  ]
+}
